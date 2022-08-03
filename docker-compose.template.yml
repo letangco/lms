@@ -1,0 +1,67 @@
+version: "3.7"
+
+services:
+  app:
+    build: ./
+    container_name: lms-backend
+    volumes:
+      - .:/app
+    tty: true
+    command:
+      - /bin/bash
+    ports:
+      - 3101:3101
+      - 9339:9339
+    expose:
+      - 3101
+      - 9339
+    links:
+      - redis:6.2-alpine
+  mongo:
+    image: mongo:4.4.4
+    container_name: lms-mongo
+    restart: always
+    ports:
+      - 3138:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME_FILE: /run/secrets/mongo/MONGO_INITDB_ROOT_USERNAME
+      MONGO_INITDB_ROOT_PASSWORD_FILE: /run/secrets/mongo/MONGO_INITDB_ROOT_PASSWORD
+      MONGO_INITDB_PASSWORD_FILE: /run/secrets/mongo/MONGO_INITDB_PASSWORD
+      MONGO_INITDB_USERNAME_FILE: /run/secrets/mongo/MONGO_INITDB_USERNAME
+      MONGO_INITDB_DATABASE_FILE: /run/secrets/mongo/MONGO_INITDB_DATABASE
+    volumes:
+      - ./mongo/data:/data/db
+      - ./mongo/secrets:/run/secrets/mongo
+      - ./mongo/entry-scripts:/docker-entrypoint-initdb.d
+  redis:
+    image: redis:6.2-alpine
+    container_name: lms-redis
+    restart: always
+    volumes:
+      - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    ports:
+      - 6379:6379
+  rabbitmq:
+    image: rabbitmq:3.8.13-management-alpine
+    container_name: lms-rabbitmq
+    volumes:
+      - ./rabbitmq/rabbitmq_management.conf:/etc/rabbitmq/rabbitmq.conf
+      - ./rabbitmq/data:/var/lib/rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.1
+    container_name: lms-elasticsearch
+    environment:
+      - discovery.type=single-node
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - ./elasticsearch/data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9300:9300

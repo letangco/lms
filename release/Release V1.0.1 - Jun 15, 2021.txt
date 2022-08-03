@@ -1,0 +1,44 @@
+# Release notes Jun 15,2021
+
+- _Product name: Enrichment LMS_
+- _Product week: week 4_
+- _Prepared by: Vi Dinh_
+
+
+**New features:**
+1. New unit type: File upload
+  - Admin can create new file unit or edit or delete existed file unit, which contains
+multiple attachments and can be shared to custom audiences within the available
+time.
+2. System log
+  - Admin can view the history tracking all create, update, delete and log in activities of users. Admin can also undo the delete action.
+  - Has these following features:
+    + Search & filter by User name
+    + Filter by event
+    + Filter by course
+    + Filter by intake
+    + Filter by user type
+    + Filter by date
+    + Clear system log
+3. Email history
+  - Admin can view email history, resend an email and also can attach files in an email template.
+  - Has these following features:
+    + Search by text (Recipient)
+    + Filter by status
+    + Clear history
+    + Sort by Recipient name, Subject name, Date, Status
+    + Resend email
+
+**Improvements:**
+1. Notification:
+  - Be able to attach file when creating email template (Up to 100MB each file)
+2. Live event:
+  - Show directly creating page and hide the calendar
+  - One live unit has only one live event
+
+**Fixes:**
+1. Fixed: Chat feature
+  - Now we have intake code beside the intake name
+  - Online status
+  - Fix problems sending, receiving messages
+2. Fixed: Display correctly ongoing live sessions information

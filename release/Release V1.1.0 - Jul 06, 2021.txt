@@ -1,0 +1,83 @@
+---
+
+# Release notes Jul06, 2021
+
+_created at: Tue Jun 22 2021 03:24:24 GMT+0000 (Coordinated Universal Time)_
+
+_updated at: Tue Jul 06 2021 06:49:32 GMT+0000 (Coordinated Universal Time)_
+
+
+- _Product name: Enrichment LMS_
+- _Product week: week 7_
+- _Prepared by: Vi Dinh_
+
+
+# 📢 New features
+
+## 1. Settings
+
+### 1.1 Set time zone
+
+-   Admin can customize the default time zone in Settings.
+
+### 1.2 Set site banner
+
+-   Admin can customize site banner.
+
+## 2. File management
+
+-   Learners now have a place to manage their uploaded files and their shared files.
+
+## 3. Test
+
+### 3.1 Multiple choice with uploading questions
+
+-   Instructor can upload multiple choice questions by using doc, docx, pdf, ppt, pptx, svg, png, jpeg.
+
+### 3.2 Gap filling question
+
+-   We have two types of gap filling question: **drop down menu** and **short answer**.
+
+### 3.3 Filter
+
+-   Admin can filter by question types to search easily while creating a test.
+
+* * *
+
+# 💪 Improvements
+
+## 1. Intakes:
+
+### 1.1 Intake report
+
+-   Each intake has its own assignment report, test report, SCORM report, survey report.
+-   Sorting function on table header.
+
+### 1.2 File unit
+
+-   Has "share to user group" option and autofill current time as publish date when creating file unit.
+
+## 2. Chart
+
+-   Everyday login tracking.
+
+## 3. Filter by category
+
+-   Filter intake list and course list by category.
+
+## 4. Reports
+
+-   UI improvement.
+-   Separate course report and intake report.
+
+## 5. Doing test
+
+-   UI improvement.
+-   Show correct answer for gap filling and drag and drop exercise.
+
+# 🧑‍🔧 Fixes
+
+-   Fixed: Only assigned learners can view the course discussion.
+-   Fixed: Can remove learner from live event.
+-   Fixed: Cannot create two user types with same key.
+-   Fixed: Display correctly intake image in report.

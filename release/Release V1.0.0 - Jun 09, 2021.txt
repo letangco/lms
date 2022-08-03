@@ -1,0 +1,35 @@
+# Release notes Jun 09, 2021
+
+**New features**
+1. Live sessions:
+  - Admin can view ongoing live sessions list: show all the ongoing live sessions (real
+time).
+2. Sorting/Filtering function:
+  - Sorting function for the column heading.
+    + User table: User, Email, Registration, Last Login
+    + Course table: Name, Last Updated on
+    + Intake table: Intake, Code, Last Updated on
+    + Zoom table: Client ID, Key, Secret Key, Web hook
+  - Filter users by last login: Last 1 hour, Last 4 hours, Today, Last 3 days, 1 week, Last
+month or ALL.
+3. Files sharing:
+  - Admin/Instructor can share file to individual learner or some learners or all learners.
+4. Submission:
+  - Instructors can ask learners to re-submit the assignment. They can also undo the re
+submit action in case of a mistake.
+  - Learners and instructors can view submission history tracking.
+
+**Improvements**
+1. Intakes:
+  - All instructors of the intake can start the live session.
+  - Auto create intake images after saving course image.
+  - Skip the calendar when creating live training unit.
+2. Notification:
+  - Admin can select user type (Instructor or Learner or All) when creating email
+template.
+
+**Fixes**
+  - Fixed: Learners are auto registered to the live event in case instructor assigned them
+to.
+  - Fixed: Event live status is exactly according to Zoom web hook.
+  - Fixed: Troubleshooting connection issues and server down issues.

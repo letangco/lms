@@ -1,0 +1,10 @@
+2021-07-04T21:43:55.640Z info: Server Origin is *
+2021-07-04T21:44:18.123Z info: Redis client connection ready
+2021-07-04T21:44:18.144Z info: AMPQ queue initialized
+2021-07-04T21:44:18.195Z info: Mongodb connected
+2021-07-04T21:44:18.200Z info: createDummyData done
+2021-07-04T21:44:19.854Z info: importUserTypeUnits DONE
+2021-07-04T21:44:20.536Z info: createInitialData done
+2021-07-04T21:44:20.539Z info: SOCKET LISTENING...
+2021-07-04T21:44:20.557Z info: Sockets is running...
+2021-07-04T21:44:20.558Z info: Backend service is running on port: 3101!
